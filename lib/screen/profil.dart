@@ -39,7 +39,7 @@ class ProfileSection extends StatelessWidget {
         children: [
           CircleAvatar(
             radius: 50,
-            backgroundImage: AssetImage('assets/images/icon.jpg'),
+            backgroundImage: AssetImage('assets/images/gambar2.jpg'),
             backgroundColor: Colors.transparent,
           ),
           SizedBox(width: 16),
@@ -124,12 +124,12 @@ class StatsSection extends StatelessWidget {
 
 class GallerySection extends StatelessWidget {
   final List<String> images = [
-    'assets/images/gambar.jpeg',
-    'assets/images/mobil.jpg',
-    'assets/images/haha.jpg',
-    'assets/images/albert.jpg',
-    'assets/images/gbr5.jpg',
-    'assets/images/gbr6.png',
+    'assets/images/gambar1.jpg',
+    'assets/images/gambar2.jpeg',
+    'assets/images/gambar3.jpeg',
+    'assets/images/gambar4.jpg',
+    'assets/images/gambar5.jpeg',
+    'assets/images/gambar6.jpeg',
   ];
   @override
   Widget build(BuildContext context) {

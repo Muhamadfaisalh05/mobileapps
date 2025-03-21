@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hamdiappps/screen/profil.dart';
 
 class ChatPage extends StatelessWidget {
   @override
@@ -7,6 +8,17 @@ class ChatPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: Text('Chat'),
+        leading: IconButton(
+// Tambahkan leading untuk tombol back
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pushReplacement(
+// Menggunakan pushReplacement agar tidak menumpuk halaman
+              context,
+              MaterialPageRoute(builder: (context) => HomeScreen()),
+            );
+          },
+        ),
       ),
       body: Stack(
 // Wrap body with Stack
@@ -95,6 +107,17 @@ class _ChatDetailState extends State<ChatDetail> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: Text(widget.chat.name),
+        leading: IconButton(
+// Tambahkan leading untuk tombol back
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pushReplacement(
+// Menggunakan pushReplacement agar tidak menumpuk halaman
+              context,
+              MaterialPageRoute(builder: (context) => HomeScreen()),
+            );
+          },
+        ),
       ),
       body: Stack(
 // Wrap body with Stack

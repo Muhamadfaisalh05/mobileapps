@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hamdiappps/screen/chart.dart';
 import 'package:hamdiappps/screen/post.dart';
 import 'package:hamdiappps/screen/navigasi.dart';
+import 'package:hamdiappps/screen/chart.dart';
 import 'package:hamdiappps/screen/signin.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -9,24 +9,6 @@ class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text('Profile'),
-//         backgroundColor: Colors.deepPurple,
-//       ),
-//       body: SingleChildScrollView(
-//         child: Column(
-//           children: [
-//             ProfileSection(),
-//             StatsSection(),
-//             GallerySection(),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
 class _HomeScreenState extends State<HomeScreen> {
   final PageController _pageController = PageController();
   int _selectedIndex = 0;
@@ -80,20 +62,11 @@ class ProfileSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(16.0),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [Colors.deepPurple, Colors.purpleAccent],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        borderRadius: BorderRadius.circular(10),
-      ),
-      margin: EdgeInsets.all(16.0),
       child: Row(
         children: [
           CircleAvatar(
             radius: 50,
-            backgroundImage: AssetImage('assets/images/gambar2.jpg'),
+            backgroundImage: AssetImage('assets/images/user.jpg'),
             backgroundColor: Colors.transparent,
           ),
           SizedBox(width: 16),
@@ -102,15 +75,9 @@ class ProfileSection extends StatelessWidget {
             children: [
               Text(
                 'Username',
-                style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
-              Text(
-                'Bio: Ini adalah bio pengguna.',
-                style: TextStyle(color: Colors.white70),
-              ),
+              Text('Bio: Ini adalah bio pengguna.'),
             ],
           ),
         ],
@@ -124,49 +91,27 @@ class StatsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(16.0),
-      margin: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(10),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.2),
-            spreadRadius: 2,
-            blurRadius: 5,
-            offset: Offset(0, 3),
-          ),
-        ],
-      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Column(
             children: [
               Text('120',
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.deepPurple)),
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
               Text('Followers'),
             ],
           ),
           Column(
             children: [
               Text('80',
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.deepPurple)),
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
               Text('Following'),
             ],
           ),
           Column(
             children: [
               Text('50',
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.deepPurple)),
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
               Text('Posts'),
             ],
           ),
@@ -178,38 +123,22 @@ class StatsSection extends StatelessWidget {
 
 class GallerySection extends StatelessWidget {
   final List<String> images = [
-    'assets/images/gambar1.jpg',
-    'assets/images/gambar2.jpeg',
-    'assets/images/gambar3.jpeg',
-    'assets/images/gambar4.jpg',
-    'assets/images/gambar5.jpeg',
-    'assets/images/gambar6.jpeg',
+    'assets/images/gbr1.jpg',
+    'assets/images/gbr2.jpg',
+    'assets/images/gbr3.jpg',
+    'assets/images/gbr4.jpg',
+    'assets/images/gbr5.jpg',
+    'assets/images/gbr6.png',
   ];
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(16.0),
-      margin: EdgeInsets.all(16.0),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(10),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.2),
-            spreadRadius: 2,
-            blurRadius: 5,
-            offset: Offset(0, 3),
-          ),
-        ],
-      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text('Gallery',
-              style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.deepPurple)),
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
           SizedBox(height: 10),
           GridView.builder(
             shrinkWrap: true,
@@ -230,6 +159,7 @@ class GallerySection extends StatelessWidget {
               );
             },
           ),
+          SizedBox(height: 20),
         ],
       ),
     );

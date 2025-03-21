@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hamdiappps/screen/welcome.dart';
 import 'package:hamdiappps/screen/profil.dart';
+import 'package:hamdiappps/screen/post.dart';
+import 'package:hamdiappps/screen/chart.dart';
+//import 'package:hamdiappps/screen/beranda.dart';
 
 void main() {
   runApp(const MyApp());

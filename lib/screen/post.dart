@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:hamdiappps/screen/profil.dart';
 import 'dart:io';
 
 class NewPostPage extends StatefulWidget {
@@ -34,6 +35,17 @@ class _NewPostPageState extends State<NewPostPage> {
       appBar: AppBar(
         title: Text('Create New Post'),
         backgroundColor: Colors.white,
+        leading: IconButton(
+// Tambahkan leading untuk tombol back
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pushReplacement(
+// Menggunakan pushReplacement agar tidak menumpuk halaman
+              context,
+              MaterialPageRoute(builder: (context) => HomeScreen()),
+            );
+          },
+        ),
       ),
       body: Stack(
 // menggunakanWrap body with Stack
